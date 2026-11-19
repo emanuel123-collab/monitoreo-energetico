@@ -1,0 +1,15 @@
+/* Paleta y medidas del tema oscuro */
+:root {
+  --bg: #0d1829;
+  --p: #15243b;
+  --p2: #1b3050;
+  --tx: #e8eef7;
+  --mu: #8fa3bf;
+  --ac: #f5c518;
+  --ok: #2ecc8f;
+  --wa: #ffb020;
+  --er: #ff5a5f;
+  --bl: #3b82f6;
+  --bd: #27406a;
+  --radio: 18px;
+}

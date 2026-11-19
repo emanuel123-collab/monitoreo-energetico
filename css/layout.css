@@ -1,0 +1,41 @@
+/* Estructura general: login, barra lateral, contenido y cabecera */
+.logo { width: 42px; height: 42px; border-radius: 50%; background: var(--ac); color: #1d3fbf; font-weight: 900; display: grid; place-items: center; border: 4px solid #1d3fbf; box-shadow: 0 0 0 3px var(--ac); }
+.logo-lg { width: 64px; height: 64px; font-size: 22px; }
+
+#login { display: grid; place-items: center; min-height: 100vh; padding: 16px; background: linear-gradient(rgba(10,20,36,.6), rgba(10,20,36,.9)), url(../assets/img/login-fondo.svg) center/cover, var(--bg); }
+#login[hidden] { display: none; }
+.lbox { width: 100%; max-width: 380px; background: var(--p); border: 1px solid var(--bd); border-radius: var(--radio); padding: 28px; box-shadow: 0 20px 60px #0008; }
+.lbox h1 { font-size: 19px; margin: 14px 0 4px; }
+.demo { margin-top: 16px; font-size: 12px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.demo p { width: 100%; }
+
+#app { display: grid; grid-template-columns: 230px 1fr; min-height: 100vh; }
+#app[hidden] { display: none; }
+.side { background: var(--p); border-right: 1px solid var(--bd); padding: 18px 12px; position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; }
+.brand { display: flex; gap: 10px; align-items: center; padding: 0 6px 18px; font-weight: 700; line-height: 1.2; }
+.brand small { display: block; font-weight: 400; }
+.side-pie { margin-top: auto; padding: 8px 6px 0; display: grid; gap: 8px; }
+.main { padding: 28px 38px; max-width: 1300px; min-width: 0; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+.top h2 { font-size: 24px; }
+
+.hero { min-height: 140px; border-radius: 20px; margin-bottom: 22px; padding: 24px 30px; display: flex; flex-direction: column; justify-content: flex-end; border: 1px solid var(--bd);
+  background: linear-gradient(90deg, rgba(13,24,41,.94) 15%, rgba(13,24,41,.3)), var(--img) center/cover, var(--p2); }
+.hero h3 { font-size: 22px; }
+.hero p { color: var(--mu); margin-top: 2px; }
+.hero--dash { --img: url(../assets/img/hero-dash.svg); }
+.hero--sen  { --img: url(../assets/img/hero-sen.svg); }
+.hero--mon  { --img: url(../assets/img/hero-mon.svg); }
+.hero--alr  { --img: url(../assets/img/hero-alr.svg); }
+.hero--rep  { --img: url(../assets/img/hero-rep.svg); }
+.hero--usr  { --img: url(../assets/img/hero-usr.svg); }
+
+@media (max-width: 760px) {
+  #app { grid-template-columns: 1fr; }
+  .side { position: static; height: auto; flex-direction: row; overflow-x: auto; gap: 4px; padding: 8px; }
+  #nav { display: flex; gap: 4px; }
+  .brand, .side-pie { display: none; }
+  .nv { width: auto; white-space: nowrap; }
+  .main { padding: 14px; }
+}
+
